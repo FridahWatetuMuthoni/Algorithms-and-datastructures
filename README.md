@@ -1,6 +1,6 @@
 # Data Structures and Algorithms
 
-## Steps of creating an algorithm
+## The Steps you need to create an algorithm
 
 1. Define the problem statement
 2. check the input and the expected output
@@ -9,11 +9,11 @@
 5. The algorithm should produce a result
 6. The algorithm should complete in a finite amount of time
 
-## Algorithm Creation
+## Algorithms Creation Process
 
-An algorithm is a set of steps that solves the problem statement
-An algorithm defination must contain a specific set of instructions in a particular order
-So basically an algorithm is a clearly defined problem statement, input and output
+An algorithm is a set of steps that solves the problem statement.
+An algorithm defination must contain a specific set of instructions in a particular order.
+So basically an algorithm is a clearly defined problem statement, input and output.
 
 1. The problem must have a clear problem statement
 2. How the input is defined and the expected output
@@ -25,35 +25,82 @@ So basically an algorithm is a clearly defined problem statement, input and outp
 ## Algorithm Efficiency
 
 Time Space Complexity:
-To measure the efficiency of an algorithm you need to consider space and time
+To measure the efficiency of an algorithm you need to consider space and time.
 Time Complexity is how long it takes an algorithm to run
-Space Complexity is the amount of memory taken by the computer to compute your algorithm
-The running time of an algortihm is the number of times an algorithm has to run to complete a dataset
-To check the running time of an algorithm always use the worst case scenario
+Space Complexity is the amount of memory taken by the computer to compute your algorithm.
+The running time of an algortihm is the number of times an algorithm has to run to complete a dataset.
+To check the running time of an algorithm always use the worst case scenario.
 
 ## Big O notation
 
-Big O notation is the theoritical defination of the complexity of an algorithm as a function of the size
+Big O notation is the theoritical defination of the complexity of an algorithm as a function of the size.
 Big O is a notation used to describe complexity. it basically simplifies time and space compexity to a single variable.
 
 O(n):
-O-> Order of magnitude of complexity
-n-> a function of the size
-O(n)-> therefore this measures the complexity of an algorthim as the data grows
+O-> Order of magnitude of complexity.
+n-> a function of the size.
+O(n)-> therefore this measures the complexity of an algorthim as the data grows.
 
-The time complexity of a linear search is O(n)
-The time complexity of a binary search is O(log n)
+The time complexity of a linear search is O(n).
+The time complexity of a binary search is O(log n).
 
 Each step in an algorithm has its own space time complexity
-Logarithmic runtime is O(log n)
+Logarithmic runtime is O(log n).
 
 ## Big O notation space time complexies
 
 ![Alt Text](./images/big-O-notation.jpeg)
 
-O(1)-> constant time complexity
-O(n)-> linear time complexity
-O(log n)-> logarithmic time complexity
+![Alt Text](./images/bigo.jpg)
+
+1. Polynomial Runtimes
+
+Algorithms with polynomial runtimes are those whose running time is bounded by a polynomial function of the input size. These algorithms are generally considered efficient and practical for a wide range of problem sizes. Here are a few examples of algorithms with polynomial runtimes:
+
+    1. Linear Search: Searching for a specific element in an unsorted list has a runtime of O(n), where n is the size of the list. The algorithm sequentially checks each element until a match is found or the end of the list is reached.
+
+    2. Bubble Sort: Bubble sort is a simple sorting algorithm that repeatedly swaps adjacent elements if they are in the wrong order. The worst-case runtime is O(n^2) for an array of size n, making it less efficient for large input sizes. However, it has a best-case runtime of O(n) when the input is already sorted.
+
+    3. Binary Search: Binary search is an efficient search algorithm for sorted lists or arrays. It repeatedly divides the search space in half by comparing the target element with the middle element. The runtime is O(log n), where n is the size of the sorted input.
+
+    4. Insertion Sort: Insertion sort is a simple sorting algorithm that builds the final sorted array one element at a time. It has a worst-case runtime of O(n^2) but performs well for small input sizes or partially sorted lists.
+
+    5. Dijkstra's Algorithm: Dijkstra's algorithm is used to find the shortest path in a weighted graph from a source vertex to all other vertices. The runtime is O((V + E) log V), where V is the number of vertices and E is the number of edges.
+
+    6. Polynomial multiplication: Multiplying two polynomials of degree n using the naive approach has a runtime of O(n^2). However, more efficient algorithms like the Karatsuba algorithm or Fast Fourier Transform (FFT) can achieve a runtime of O(n log n).
+
+Polynomial runtimes are generally desirable because they allow algorithms to scale well with larger inputs. However, it's important to note that the polynomial notation hides constant factors and lower-order terms, which can still have a significant impact on the actual runtime. Additionally, there are problems for which no known polynomial-time algorithm exists (e.g., NP-complete problems), and for those, approximation algorithms or heuristics are often employed.
+
+    1. O(1)-> constant runtime
+    2. O(n)-> linear runtime
+    3. O(log n)-> logarithmic runtime
+    4. O(n^2) ->Quadratic runtime
+    5. O(n^3)-> Cubic runtime
+    6. O(n log n)-> Quasilinear runtime (n * log n)-> this is mostly found in sorting algorithms
+
+2. Exponetial Runtimes
+
+Algorithms with exponential runtimes are those whose running time grows exponentially with the size of the input. These algorithms are generally considered to be inefficient for large input sizes and can quickly become computationally infeasible. Here are a few examples of algorithms with exponential runtimes:
+
+    1. Brute Force: The brute force algorithm exhaustively checks all possible solutions to a problem by systematically trying each one. For problems with a large solution space, the running time can be exponential. For example, finding all subsets of a set with n elements has a runtime of O(2^n).
+
+    2. Traveling Salesman Problem (TSP): The TSP is a well-known combinatorial optimization problem where the goal is to find the shortest possible route that visits a set of cities and returns to the starting city. The brute force approach to solve TSP has a runtime of O(n!), which grows exponentially with the number of cities.
+
+    3. Knapsack Problem: The knapsack problem involves selecting a subset of items with maximum value, given a weight constraint. The brute force solution explores all possible subsets of items, resulting in a runtime of O(2^n), where n is the number of items.
+
+    4. Subset Sum Problem: Given a set of integers and a target sum, the subset sum problem aims to determine if there exists a subset of the integers that adds up to the target sum. The brute force solution has a runtime of O(2^n) as it checks all possible subsets.
+
+    5. Graph Coloring Problem: The graph coloring problem involves assigning colors to the vertices of a graph such that no two adjacent vertices have the same color. The brute force solution explores all possible color assignments, resulting in a runtime of O(k^n), where k is the number of colors and n is the number of vertices.
+
+## How to Calculate the complexity of an algorithm
+
+1. Binary Search algorithm
+    i. Determine the middle position of the sorted list-> O(1)
+    ii. Compare the element in the middle position to the target element-> O(1)
+    iii. If the elements match we return the middle position and end->O(1)
+    iv. If the elements dont match we check whether the element in the middle position is smaller or larger than the target element. If it is we go back to step 3 with the new list and repeat the process until you find it or it returns a subset with a single value-> O(log n)
+
+When evaluating the runtime of an algorithm we say that the algorithm has as its upper bound the same runtime as the least efficient step in the algorithm. Therefore considering all of the steps required to perform a binary search the least effiecient  step is a O(log n). Therefore the time complexity of the algorithm is O(log n).
 
 ## Logarithms
 
@@ -92,4 +139,4 @@ Binary search requires the data to be sorted
 1. Determine the middle position of the sorted list
 2. Compare the element in the middle position to the target element
 3. If the elements match we return the middle position and end
-4. If the elements dont match we check whether the element in the middle position is smaller or larger than the target element. If it is we go back to step 3 with the new list and repeat the process until you find it or it returns a subli
+4. If the elements dont match we check whether the element in the middle position is smaller or larger than the target element. If it is we go back to step 3 with the new list and repeat the process until you find it or it returns a subset with a single value
