@@ -78,7 +78,7 @@ Polynomial runtimes are generally desirable because they allow algorithms to sca
     5. O(n^3)-> Cubic runtime
     6. O(n log n)-> Quasilinear runtime (n * log n)-> this is mostly found in sorting algorithms
 
-2. Exponetial Runtimes
+1. Exponetial Runtimes
 
 Algorithms with exponential runtimes are those whose running time grows exponentially with the size of the input. These algorithms are generally considered to be inefficient for large input sizes and can quickly become computationally infeasible. Here are a few examples of algorithms with exponential runtimes:
 
@@ -140,3 +140,31 @@ Binary search requires the data to be sorted
 2. Compare the element in the middle position to the target element
 3. If the elements match we return the middle position and end
 4. If the elements dont match we check whether the element in the middle position is smaller or larger than the target element. If it is we go back to step 3 with the new list and repeat the process until you find it or it returns a subset with a single value
+
+## DATA STRUCTURES
+
+In simple terms a data structure is a way of storing data when programming.
+
+A data structure is a data storage format. It is the collection of values and the format they are stored in, the relationships between the values in the collection as well as the operations applied on the data stored in the structure.
+
+The most common data structure operations include:
+
+1. accessing a value
+2. inserting a value
+3. deleting a value
+4. searching for a value
+
+Why do we build custom data structures?
+we build custom data structures because each data structure solves a particular problem
+for example an array is pretty good at accessing values but performs pretty bad in searching, inserting and deleting so we build custom data strutures to solve each of the above problems
+
+## LINKED LIST
+
+A linked list is a linear data structure where each element in the list is contained in a seperate object called a node. A node models two pieces of information the value and the address/reference of the next node in the list
+The first node in a linked list is called the head and the last element in the linked list is called the tail of the linked list
+The head and the tail of the linked list are special. Mostly a linked list maintains the poisiton/address of the head and sometimes both the head and the tail
+Each node points to the next item of the linked list but the tail points to null to indicate the end of the linked list
+There are two types of linked lists:
+
+1. Singly Linked List -> a node only stores the pointer to the next node
+2. Doubly linked list-> a node store the pointer to both the next and the previous node

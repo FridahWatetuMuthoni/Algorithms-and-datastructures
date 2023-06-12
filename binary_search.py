@@ -2,7 +2,7 @@ import math
 
 
 def binary_search(list, target):
-    """
+    """ 
     Description:
         The function searches a value in a list that is provided as an arguement
     Parameters:
