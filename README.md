@@ -168,3 +168,14 @@ There are two types of linked lists:
 
 1. Singly Linked List -> a node only stores the pointer to the next node
 2. Doubly linked list-> a node store the pointer to both the next and the previous node
+
+## MERGE SORT
+
+Merge sort is a divide and conquer algorithm which basically means that the algorithm breaks down problems into multiple subproblems reculsively untill they become simple to solve. Then the solutions are combined to solve the original problem
+The merge sort has a O(n *  log n) running time
+This is the optimal running time for comparison based algorithms
+The General Principles of Merge Sort:
+
+1. Split array in half
+2. Call Merge Sort on each half to sort them recursively
+3. Merge both halves into one sorted array
