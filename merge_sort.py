@@ -13,6 +13,7 @@ def merge_sort(list):
     left_half, right_half = split(list)
     left = merge_sort(left_half)
     right = merge_sort(right_half)
+    print(f"left_half: {left_half}, right_half: {right_half}")
 
     return merge(left, right)
 
