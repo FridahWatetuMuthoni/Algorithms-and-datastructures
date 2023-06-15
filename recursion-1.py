@@ -1,13 +1,10 @@
-def a():
-    return "hello " + b()
+# sum of natural numbers
+
+def sum_natural_numbers(num, sum=0):
+    if (num == 0):
+        return sum
+    return sum_natural_numbers(num - 1, sum + num)
 
 
-def b():
-    return "my " + c()
-
-
-def c():
-    return "friend "
-
-
-print(a())
+total = sum_natural_numbers(100)
+print(total)
