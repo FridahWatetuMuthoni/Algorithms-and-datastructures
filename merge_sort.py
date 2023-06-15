@@ -6,15 +6,18 @@ def merge_sort(list):
     Conquer: Recursively sort the sublists created in previous step
     Combine: Merge the sorted sublists created in previous step
     """
-    # stopping condition for the recursion
+    # Base case: If the list has only one element, it is already sorted
     if (len(list) <= 1):
         return list
-
+    
+    # Divide the list into two halves
     left_half, right_half = split(list)
+
+    # Recursively sort the two halves
     left = merge_sort(left_half)
     right = merge_sort(right_half)
-    print(f"left_half: {left_half}, right_half: {right_half}")
 
+    # Merge the sorted halves and return them
     return merge(left, right)
 
 
@@ -38,7 +41,10 @@ def merge(left, right):
     i = 0  # for indexes in the left list
     j = 0  # for indexes in the right list
 
+    # Compare elements from the left and right sublists 
+    # and add the smaller one to the merged list
     while (i < len(left) and j < len(right)):
+
         if (left[i] < right[j]):
             new_list.append(left[i])
             i += 1
@@ -46,10 +52,12 @@ def merge(left, right):
             new_list.append(right[j])
             j += 1
 
+    # Add the remaining elements from the left sublist, if any
     while (i < len(left)):
         new_list.append(left[i])
         i += 1
-
+    
+    # Add the remaining elements from the right sublist, if any
     while j < len(right):
         new_list.append(right[j])
         j += 1

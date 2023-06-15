@@ -172,10 +172,12 @@ There are two types of linked lists:
 ## MERGE SORT
 
 Merge sort is a divide and conquer algorithm which basically means that the algorithm breaks down problems into multiple subproblems reculsively untill they become simple to solve. Then the solutions are combined to solve the original problem
-The merge sort has a O(n *  log n) running time
+The merge sort has a O(n log n) running time
 This is the optimal running time for comparison based algorithms
 The General Principles of Merge Sort:
 
 1. Split array in half
 2. Call Merge Sort on each half to sort them recursively
 3. Merge both halves into one sorted array
+
+![Alt Text](./images/merge-sort.png)

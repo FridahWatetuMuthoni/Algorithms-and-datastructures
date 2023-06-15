@@ -19,3 +19,10 @@ for item in new_list:
 # appending -> inserting values at the end of an array=> O(1)
 # deleting a value at any  specific place=> O(n)
 # deleting an item at the end of the list=> O(1)
+
+numbers = [54, 62, 93, 17, 77, 31, 44, 55, 20]
+
+mid = len(numbers) // 2
+first_half = numbers[:mid]
+second_half = numbers[mid:]
+print(f"First Half: {first_half}, Second Half: {second_half}")
