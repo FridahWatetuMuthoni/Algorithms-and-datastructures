@@ -16,9 +16,9 @@ class Node:
     next_node=> the pointer/link to the next node in the linked list
     """
 
-    def __init__(self, data, next_node=None):
+    def __init__(self, data):
         self.data = data
-        self.next_node = next_node
+        self.next_node = None
 
     def __repr__(self):
         return f"Node data: {self.data}"
