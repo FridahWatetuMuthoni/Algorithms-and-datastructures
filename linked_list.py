@@ -15,11 +15,10 @@ class Node:
     data => the value contained in the linked list
     next_node=> the pointer/link to the next node in the linked list
     """
-    data = None
-    next_node = None
 
-    def __init__(self, data):
+    def __init__(self, data, next_node=None):
         self.data = data
+        self.next_node = next_node
 
     def __repr__(self):
         return f"Node data: {self.data}"
@@ -124,6 +123,19 @@ class Linked_List:
                 current = current.next_node
         return current
 
+    def node_at_index(self, index):
+        if index == 0:
+            return self.head
+        else:
+            current = self.head
+            position = 0
+
+            while (position < index):
+                current = current.next_node
+                position += 1
+
+            return current
+
     def __repr__(self):
         """ 
         Returns a string representation of the list and it takes O(n) time
@@ -143,6 +155,7 @@ class Linked_List:
         return "->".join(nodes)
 
 
+"""
 linked = Linked_List()
 linked.add(20)
 linked.add(30)
@@ -151,3 +164,4 @@ linked.add(50)
 print(linked.size())
 print(linked)
 print(linked.search(400))
+"""
