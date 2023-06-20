@@ -38,7 +38,7 @@ Big O is a notation used to describe complexity. it basically simplifies time an
 
 O(n):
 O-> Order of magnitude of complexity.
-n-> a function of the size.
+n-> is the number of elements that you are operating on
 O(n)-> therefore this measures the complexity of an algorthim as the data grows.
 
 The time complexity of a linear search is O(n).
@@ -95,12 +95,12 @@ Algorithms with exponential runtimes are those whose running time grows exponent
 ## How to Calculate the complexity of an algorithm
 
 1. Binary Search algorithm
-    i. Determine the middle position of the sorted list-> O(1)
-    ii. Compare the element in the middle position to the target element-> O(1)
-    iii. If the elements match we return the middle position and end->O(1)
-    iv. If the elements dont match we check whether the element in the middle position is smaller or larger than the target element. If it is we go back to step 3 with the new list and repeat the process until you find it or it returns a subset with a single value-> O(log n)
+   i. Determine the middle position of the sorted list-> O(1)
+   ii. Compare the element in the middle position to the target element-> O(1)
+   iii. If the elements match we return the middle position and end->O(1)
+   iv. If the elements dont match we check whether the element in the middle position is smaller or larger than the target element. If it is we go back to step 3 with the new list and repeat the process until you find it or it returns a subset with a single value-> O(log n)
 
-When evaluating the runtime of an algorithm we say that the algorithm has as its upper bound the same runtime as the least efficient step in the algorithm. Therefore considering all of the steps required to perform a binary search the least effiecient  step is a O(log n). Therefore the time complexity of the algorithm is O(log n).
+When evaluating the runtime of an algorithm we say that the algorithm has as its upper bound the same runtime as the least efficient step in the algorithm. Therefore considering all of the steps required to perform a binary search the least effiecient step is a O(log n). Therefore the time complexity of the algorithm is O(log n).
 
 ## Logarithms
 
@@ -181,3 +181,7 @@ The General Principles of Merge Sort:
 3. Merge both halves into one sorted array
 
 ![Alt Text](./images/merge-sort.png)
+
+## SORTING AND SEARCHING ALGORITHMS
+
+O(n) => n is the number of elements that you are operating on
